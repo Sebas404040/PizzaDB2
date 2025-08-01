@@ -35,3 +35,66 @@ Cada documento en esta colección incluye los siguientes campos:
 - direccion: Dirección de residencia o entrega asociada al cliente.
 
 
+### ➕ Colección: Adiciones
+La colección Adiciones almacena todos los elementos adicionales que un cliente puede incluir en su pedido, como ingredientes extra, salsas o complementos especiales.
+
+Cada documento en esta colección contiene:
+
+- id_adiciones: Identificador único de la adición.
+
+- nombre: Nombre descriptivo de la adición (ej. "Queso extra", "Tocineta").
+
+- precio: Valor adicional que se suma al total del pedido al seleccionar esta adición.
+
+- id_tipoProducto: Referencia al tipo de producto al que puede asociarse esta adición (relación con la colección TipoProducto).
+
+
+### 🗂️ Colección: TipoProducto
+La colección TipoProducto define las categorías o tipos generales a los que puede pertenecer un producto. Esta clasificación permite organizar y filtrar los productos disponibles en el sistema de forma eficiente.
+
+Cada documento en esta colección incluye:
+
+- id_tipoProducto: Identificador único del tipo de producto.
+
+- nombre: Nombre descriptivo de la categoría (por ejemplo: Pizza, Bebida, Postre, Adición).
+
+### 🧂 Colección: Ingredientes
+La colección Ingredientes contiene todos los componentes que conforman los productos del sistema, especialmente útil para productos personalizables como las pizzas o panzerottis.
+
+Cada documento en esta colección incluye:
+
+- id_ingredientes: Identificador único del ingrediente.
+
+- nombre: Nombre del ingrediente (por ejemplo: Jamón, Champiñones, Mozzarella).
+
+
+### 🧃🍕 Colección: Combos
+La colección Combos permite agrupar varios productos en una sola oferta, brindando al cliente la posibilidad de adquirirlos juntos con un precio especial o con descuento. Esta colección facilita la promoción de paquetes y mejora la experiencia de compra al ofrecer opciones más completas y atractivas.
+
+Cada documento en esta colección contiene:
+
+- id_combos: Identificador único del combo.
+
+- nombre: Nombre comercial del combo (por ejemplo: Combo Familiar, Combo 2x1).
+
+- productos: Lista de referencias a productos individuales incluidos en el combo (relación con la colección Producto).
+
+- precio_combo: Precio total del combo, generalmente con descuento respecto al precio por separado.
+
+- observacion: Campo opcional para incluir detalles adicionales, restricciones o notas especiales del combo.
+
+### 🧾 Colección: Pedidos
+La colección Pedidos registra toda la información relacionada con las solicitudes realizadas por los clientes, ya sea un producto individual, un postre o un combo. Esta colección es fundamental para el control de ventas y la gestión operativa del establecimiento.
+
+Cada documento en esta colección contiene:
+
+- id_pedidos: Identificador único del pedido.
+
+- cedula: Referencia al cliente que realiza el pedido (relación con la colección Cliente).
+
+- fecha_pedido: Fecha y hora en que se realiza el pedido.
+
+- locacion: Define si el pedido es para llevar o para consumir en el establecimiento.
+
+
+
