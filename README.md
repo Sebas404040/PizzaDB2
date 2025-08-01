@@ -1,5 +1,8 @@
 # PizzaDB2
 
+![PIZZADB2](/image.png)
+
+
 ## Contextualización
 
 ### ¿Qué es una base de datos NoSQL?
@@ -251,3 +254,11 @@ Nos surgieron varias dudas, por ejemplo:
 - ¿Qué tan bien escala este modelo cuando hay muchos pedidos o clientes?
 
 Estas preguntas nos dejaron con ganas de seguir aprendiendo más sobre las mejores prácticas en el modelado NoSQL y cómo se aplican en situaciones reales.
+
+## AUTORES (Equipo chen) 💻 🎖️
+
+- Brayan Villabona
+
+- Sergio Lievano
+
+- Joan Sebastian Gómez Serrano
