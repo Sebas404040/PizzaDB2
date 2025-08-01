@@ -15,6 +15,8 @@ Cada documento en esta colección representa un producto específico e incluye l
 
 - id_tipoProducto: Referencia al tipo de producto (relación con la colección TipoProducto).
 
+- precio: el costo del producto.
+
 - ingredientes: Lista de referencias a los ingredientes que componen el producto (relación con la colección Ingredientes).
 
 - tamaño: Tamaño del producto, aplicable especialmente a ítems como pizzas y bebidas.
@@ -96,5 +98,68 @@ Cada documento en esta colección contiene:
 
 - locacion: Define si el pedido es para llevar o para consumir en el establecimiento.
 
+- productos: El documento "productos" contiene todos los productos que haya pedido el cliente. Mas abajo encontrara como se estructura este documento
+
+- total: suma de todos los subtotales.
 
 
+## 🧪 Ejemplos de Colecciones (Formato JSON)
+A continuación, se presentan ejemplos representativos de cada colección en formato JSON, con el fin de ilustrar su estructura y facilitar su comprensión e implementación. Estos modelos pueden servir como referencia para pruebas, desarrollo o integración con bases de datos NoSQL como MongoDB.
+
+### Coleccion de producto
+```json
+{
+  "_id": "prod001",
+  "nombre": "Pizza Hawaiana",
+  "id_tipoProducto": "tipo001",  
+  "precio": 30000,
+  "ingredientes": ["ing001", "ing002", "ing003"],
+  "tamaño": ["personal", "mediana", "familiar"]
+}
+```
+
+### Coleeccion de pedido
+
+```json
+{
+  "_id": "ped001",
+  "cliente_id": "cli123",
+  "fecha": "2025-08-01T18:00:00Z",
+  "locacion": "para llevar",
+  "productos": [
+    {
+      "producto_id": "prod001",
+      "tamaño": "mediana",
+      "adiciones": ["adi001"]
+    },
+    {
+      "producto_id": "prod010",
+      "adiciones": []
+    }
+  ],
+  "total": 37000,
+}
+```
+### Coleccion de combos
+
+```json
+Combo {
+  "_id": "combo001",
+  "nombre": "Combo Familiar",
+  "productos": ["prod001", "prod010"],
+  "precio_combo": 45000,
+  "observacion": "Incluye 1 pizza grande y 2 bebidas"
+}
+```
+
+### Coleccion de clientes
+
+```json
+Clientes {
+  "_id": "cli123",
+  "nombre": "Carlos Pérez",
+  "telefono": "3123456789",
+  "direccion": "Calle 123 #45-67",
+  "correo": "carlos@example.com"
+}
+```
