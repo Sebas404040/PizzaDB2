@@ -1,0 +1,10 @@
+{
+    "_id": "combo001",
+    "nombre": "Combo Pareja",
+    "productos": [
+        "prod001",
+        "prod010"
+    ],
+    "precio_combo": 45000,
+    "observacion": "Incluye 1 pizza mediana hawaiana y 2 gaseosas de 400ml"
+}

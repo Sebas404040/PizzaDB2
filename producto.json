@@ -1,0 +1,16 @@
+{
+    "_id": "prod001",
+    "nombre": "Pizza Hawaiana",
+    "tipo_producto_id": "tipo001",
+    "precio": 30000,
+    "ingredientes": [
+        "ing001",
+        "ing002",
+        "ing003"
+    ],
+    "tamanioo": [
+        "personal",
+        "mediana",
+        "familiar"
+    ]
+}

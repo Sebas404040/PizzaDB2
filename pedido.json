@@ -1,0 +1,21 @@
+{
+    "_id": "ped001",
+    "cedula": "cli123",
+    "fecha": "2025-08-01T18:30:00Z",
+    "locacion": "en el lugar",
+    "productos": [
+        {
+            "producto_id": "prod001",
+            "tamanio": "mediana",
+            "adiciones": [
+                "adi001",
+                "adi002"
+            ]
+        },
+        {
+            "producto_id": "prod010",
+            "adiciones": []
+        }
+    ],
+    "total": 39000
+}
